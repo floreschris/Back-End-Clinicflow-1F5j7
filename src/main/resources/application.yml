@@ -1,0 +1,41 @@
+spring:
+  jpa:
+    database: postgresql
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost/system_hospital
+    username: postgres
+    password: unmsm159
+
+  banner:
+    location: clinicflow.txt
+
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: indiosmelodia@gmail.com
+    password: yohpmseikpnyfxpl
+    port: 587
+    protocol: smtp
+    test-connection: false
+    properties:
+      mail:
+        ssl:
+          enable: true
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+patient:
+  controller:
+    path: /patients
+
+jwt:
+  secret: xxxxxx
